@@ -11,7 +11,7 @@ In this sense, _open money_ is a particular case of _open metrics_.
 The name _openmoney_ refers to specific software used to 
 implement _open money_ or, more generally, _open metrics_.
 
-## The openmoney (OM) suite
+### The _current_ openmoney (OM) suite
 
 The current implementation of the _openmoney_ software was created by 
 [Dominique Legault](https://github.com/deefactorial) and comprises (so far) 
@@ -70,6 +70,9 @@ The _OM suite_ described above is very much a work in progress, and is intended 
 
 Although Couchbase scales well and can replicate very quickly if clustered, the user-centred design of the _OM suite_ might make Holochain a more natural fit in due course.
 
+### Reviewing, updating and extending the specification
+
+An urgen task being undertaking at the time of writing is the review and clarification of the core [specification](https://openmoney.github.io/specification/), updating and extending where necessary.
   
 ### Short-term development
 
@@ -130,4 +133,21 @@ Although Couchbase scales well and can replicate very quickly if clustered, the 
 
 ?
 
+### An alternative implementation
+
+Because the recursive namespace structure naturally mirrors the structure of a 
+Unix-like filesystem, that is being used as the basis of an alternative implementation
+currently under development as a Python module (RNA). The purposes of that will be
+to provide a quicker route to development of
+- a richer collection of OM clients
+- a more easily expanded reference implementation
+- a simulation and visualization suite
+- support for compound/vector currencies (information-retentive)
+- modelling, forecasting and algedonic tools 
+
+Another objective here is to provide an API consistent with, but a superset of, that of the _openmoney_ suite described above. This will simplify development of portable and re-usable components.
+
+The recursively-nested, holonic structure of the OM suite reflects the structure of 
+the Viable System Model, so a suite of tools will be developed over time to support 
+its application.
 
