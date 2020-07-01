@@ -4,7 +4,7 @@
 
 The term _open money_ (all lower case) refers to the concept of user-created 
 "monies". This is described in a number of writings many of which have been 
-collected [here](https://docs.google.com/document/d/1gVuolh6TV7fH5tNTyZMCDGTsFFJeOWCP-X0Diwnj7MA/edit)
+collected [here](https://openmoney.github.io/openmoney-links/).
 
 In this sense, _open money_ is a particular case of _open metrics_.
 
@@ -14,8 +14,7 @@ implement _open money_ or, more generally, _open metrics_.
 ### The _current_ openmoney (OM) suite
 
 The current implementation of the _openmoney_ software was created by 
-[Dominique Legault](https://github.com/deefactorial) and comprises (so far) 
-four main components:
+[Dominique Legault](https://github.com/deefactorial) and comprises four main components:
 
 #### openmoney-api (OM API)
 
