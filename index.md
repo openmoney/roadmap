@@ -1,37 +1,133 @@
-## Welcome to GitHub Pages
+# openmoney development roadmap
 
-You can use the [editor on GitHub](https://github.com/openmoney/roadmap/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+#### Clarification of terms:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The term _open money_ (all lower case) refers to the concept of user-created 
+"monies". This is described in a number of writings many of which have been 
+collected [here](https://docs.google.com/document/d/1gVuolh6TV7fH5tNTyZMCDGTsFFJeOWCP-X0Diwnj7MA/edit)
 
-### Markdown
+In this sense, _open money_ is a particular case of _open metrics_.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The name _openmoney_ refers to specific software used to 
+implement _open money_ or, more generally, _open metrics_.
 
-```markdown
-Syntax highlighted code block
+## The openmoney (OM) suite
 
-# Header 1
-## Header 2
-### Header 3
+The current implementation of the _openmoney_ software was created by 
+[Dominique Legault](https://github.com/deefactorial) and comprises (so far) 
+four main components:
 
-- Bulleted
-- List
+#### openmoney-api (OM API)
 
-1. Numbered
-2. List
+https://github.com/openmoney/openmoney-api (forked from https://github.com/deefactorial/openmoney-api)
 
-**Bold** and _Italic_ and `Code` text
+This provides a REST API to a Couchbase DB in which recursively nested 
+namespaces enclose _stewards_, _currencies_ and _accounts_. This is intended as
+a component with an expanding collection of tools.
 
-[Link](url) and ![Image](src)
-```
+All users are responsible for the management of their own records so every user
+is termed a _steward_.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+The _stewards_ are self-registering and each can create _currencies_, _accounts_
+and _namespaces_ where permitted
 
-### Jekyll Themes
+A _currency_ is any value representable by a scalar. Therefore the term _open
+money_ is unnecessarily restrictive. It is maintained partly for historical 
+reasons, but also because _monies_ of various type are important cases of 
+_currency_ in this sense.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/openmoney/roadmap/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#### openmoney-network
 
-### Support or Contact
+https://github.com/openmoney/openmoney-network (forked from https://github.com/deefactorial/openmoney-network)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This is a small client designed to access the OM API. Its display is sufficiently
+compact to make it usable on a smartphone or in an iFrame.
+
+This is essentially a proof-of-concept prototype.
+
+#### openmoney-gift-api
+
+https://github.com/openmoney/openmoney-gift-api (forked from https://github.com/deefactorial/openmoney-gift-api)
+
+An alternative API for the _merchants_' loyalty system (OM Gift). This shares
+some of the data from the OM API's Couchbase DB but also using an additional
+key-value DB. 
+
+#### openmoney-gift (OM gift)
+
+https://github.com/openmoney/openmoney-gift (forked from https://github.com/deefactorial/openmoney-gift)
+
+The user interface for the _merchants_' loyalty system. This version supports
+the design and printing of paper vouchers identifying the _merchant_, target 
+_account_ and payment to be recorded via a QR code.
+
+Any smartphone can be used to scan the QR code, redirecting the payer to the _OM
+Gift_ instance.
+
+### The current state of development
+
+The _OM suite_ described above is very much a work in progress, and is intended primarily as a proof-of-concept demonstration system. This version has been written for use only on Ubuntu (and possibly Debian) and runs Couchbase in a Docker container.
+
+Although Couchbase scales well and can replicate very quickly if clustered, the user-centred design of the _OM suite_ might make Holochain a more natural fit in due course.
+
+  
+### Short-term development
+
+#### openmoney-api
+
+- extend and complete the test suite
+
+- API sequence diagram
+
+- document code
+
+- resolve lost password bug
+
+- update the code
+
+- isolate Couchbase calls from API in preparation for replacement of back end
+  (possibly with Holochain-based storage)
+
+#### openmoney-network
+
+- extend and complete the test suite
+
+- document code
+
+- resolve lost password bug
+
+- extend capabilities
+
+- update the code
+
+#### openmoney-gift-api
+
+- extend and complete the test suite
+
+- update the code
+
+#### openmoney-gift
+
+- extend and complete the test suite
+
+- update the code
+
+### Medium-term development
+
+- bring stewards' private key storage back into client components (openmoney-network and openmoney-gift
+
+- develop user feedback systems
+
+- complete Swagger-generated client libraries (Python initially)
+
+- develop a richer collection of clients
+
+- (perhaps) re-implement storage on Holochain (using Swagger generated Rust client)
+
+- design and develop simulation/modelling/visualization suite
+
+### Longer-term development
+
+?
+
+
