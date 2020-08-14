@@ -71,11 +71,11 @@ Although Couchbase scales well and can replicate very quickly if clustered, the 
 
 ### Reviewing, updating and extending the specification
 
-An urgen task being undertaking at the time of writing is the review and clarification of the core [specification](https://openmoney.github.io/specification/), updating and extending where necessary.
+An urgent task being undertaking at the time of writing is the review and clarification of the core [specification](https://openmoney.github.io/specification/), updating and extending where necessary.
   
 ### Short-term development
 
-#### openmoney-api
+##### openmoney-api
 
 - extend and complete the test suite
 
@@ -87,10 +87,7 @@ An urgen task being undertaking at the time of writing is the review and clarifi
 
 - update the code
 
-- isolate Couchbase calls from API in preparation for replacement of back end
-  (possibly with Holochain-based storage)
-
-#### openmoney-network
+##### openmoney-network
 
 - extend and complete the test suite
 
@@ -102,29 +99,35 @@ An urgen task being undertaking at the time of writing is the review and clarifi
 
 - update the code
 
-#### openmoney-gift-api
+##### openmoney-gift-api
 
 - extend and complete the test suite
 
 - update the code
 
-#### openmoney-gift
+##### openmoney-gift
 
 - extend and complete the test suite
 
 - update the code
+
+#### In parallel ...
+
+- completion, extension and clarification of the specification (see https://openmoney.github.io/roadmap/)
+
+- preparation of OpenAPI 3.0 specification YAML file (extended from the existing Swagger 2.0 YAML definition)
+
+- generation of API and client stubs from OpenAPI 3.0 specification - including Rust API framework for Holochain backend
+
+- preparation of specification file to automate production of hApp code
 
 ### Medium-term development
 
-- bring stewards' private key storage back into client components (openmoney-network and openmoney-gift
-
 - develop user feedback systems
 
-- complete Swagger-generated client libraries (Python initially)
+- complete OpenAPI-generated client libraries (Python and JavaScript initially)
 
 - develop a richer collection of clients
-
-- (perhaps) re-implement storage on Holochain (using Swagger generated Rust client)
 
 - design and develop simulation/modelling/visualization suite
 
