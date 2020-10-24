@@ -1,52 +1,10 @@
 <html>
- 
+
 <head>
-  
-<title>openmoney software specification</title>
 
-<style type="text/css">
+<title>OpenMoney development roadmap</title>
 
-  body, div, p, h1, h2, h3, a, li { font-family: Lucida Grande,Verdana,Helvetica,Arial,sans-serif; }
-  body { font-size: 14px; }
-
-  .footnote { font-size: 12px; }
-  .deleted { color: #000080; text-decoration: line-through; }
-  .added { color: #800000; }
-  .moved { color: #600060; }
-
-  td { font-size: 14px; background: #E0F0E0; }
-  td.col-label { color: #006000; font-weight: bold; background: #A0D0A0; }
-  td.row-label { color: #006000; font-weight: bold; background: #A0D0A0; }
-  td.row-notes { color: #006000; bold; background: #A0D0A0; font-size: 12px; }
-  td.blank { font-size: 12px; background: #FFFFFF; }
-
-  a { text-decoration:none; }
-  a:link { color:#006000; }
-  a:visited { color:#106010; }
-  a:active { color:#008000; }
-  a:hover { color:#209020; }
-
-  h1 { font-size: 26px; font-weight: bold; color: #004000; background-color: #A0D0A0;
-  padding-top: 4px; padding-left: 8px; padding-bottom: 6px; }
-  h2 { font-size: 22px; font-weight: bold; color: #006000; }
-  h3 { font-size: 18px; font-weight: bold; color: #007000; }
-  h4 { font-size: 14px; font-weight: bold; color: #005000; }
-  h5 { font-size: 12px; font-weight: bold; color: #005000; }
-  p { margin-bottom: 0; }
-  ul { margin-top: 0; }
-
-  div.footbar { background-color: #A0D0A0;
-  padding-top: 4px; padding-left: 4px; padding-bottom: 4px; }
-
-  img { display: block; }
-  img.wrap { max-width: 70%; margin: 30px 0px; }
-  img.align-right-middle { float:right; padding:30px; vertical-valign:middle; }
-  img.align-left { float:left; padding:20px; text-align:left; }
-  img.align-left-middle { float:left; padding:30px; vertical-valign:middle; }
-
-  hr { border: 0; border-top: 1px solid #8c8c8c; border-bottom: 1px solid #fff; }
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/om_gh.css" media="screen"/>
 
 </head>
 
@@ -54,7 +12,7 @@
 
 <h1>openmoney development roadmap</h1>
 
-<h3>Clarification of terms:</h3>
+<h4>Clarification of terms:</h4>
 
 <p>The term <i>open money</i> (all lower case) refers to the concept of user-created "monies". This is described in a number of writings many of which have been collected <a href="https://openmoney.github.io/openmoney-links/">here</a>.</p>
 
@@ -62,109 +20,21 @@
 
 <p>The name <i>openmoney</i> refers to specific software used to implement <i>open money</i> or, more generally, <i>open metrics</i>.</p>
 
-<h2>The <i>current</i> openmoney (OM) suite</h2>
+<h3>The current openmoney (OM) suite</h3>
 
-<p>The current implementation of the <i>openmoney</i> software was created by <a href="https://github.com/deefactorial">Dominique Legault</a> and comprises four main components:</p>
+<p>The <a href="current.html">current implementation</a> of the <i>openmoney</i> software is essentially a proof-of-concept prototype.</p>
 
-<h3>openmoney-api (OM API)</h3>
-
-<p><a href="https://github.com/openmoney/openmoney-api">https://github.com/openmoney/openmoney-api</a> (forked from <a href="https://github.com/deefactorial/openmoney-api">here</a>)</p>
-
-<p>This provides a REST API to a Couchbase DB in which recursively nested namespaces enclose <i>stewards</i>, <i>currencies</i> and <i>accounts</i>. This is intended as a component with an expanding collection of tools.</p>
-
-<p>All users are responsible for the management of their own records so every user is termed a <i>steward</i>.</p>
-
-<p>The <i>stewards</i> are self-registering and each can create <i>currencies</i>, <i>accounts</i> and <i>namespaces</i> where permitted.</p>
-
-<p>A <i>currency</i> is any value representable by a scalar. Therefore the term <i>open money</i> is unnecessarily restrictive. It is maintained partly for historical reasons, but also because <i>monies</i> of various type are important cases of <i>currency</i> in this sense.</p>
-
-<h3>openmoney-network</h3>
-
-<p><a href="https://github.com/openmoney/openmoney-network">https://github.com/openmoney/openmoney-network</a> (forked from <a href="https://github.com/deefactorial/openmoney-network">here</a>)</p>
-
-<p>This is a small client designed to access the OM API. Its display is sufficiently compact to make it usable on a smartphone or in an iFrame.</p>
-
-<p>This is essentially a proof-of-concept prototype.</p>
-
-<h3>openmoney-gift-api</h3>
-
-<p><a href="https://github.com/openmoney/openmoney-gift-api">https://github.com/openmoney/openmoney-gift-api</a> (forked from <a href="https://github.com/deefactorial/openmoney-gift-api">here</a>)</p>
-
-<p>An alternative API for the <i>merchants</i>' loyalty system (OM Gift). This shares some of the data from the OM API's Couchbase DB but also using an additional key-value DB. </p>
-
-<h3>openmoney-gift (OM gift)</h3>
-
-<p><a href="https://github.com/openmoney/openmoney-gift">https://github.com/openmoney/openmoney-gift</a> (forked from <a href="https://github.com/deefactorial/openmoney-gift">here</a>)</p>
-
-<p>The user interface for the <i>merchants</i>' loyalty system. This version supports the design and printing of paper vouchers identifying the <i>merchant</i>, target <i>account</i> and payment to be recorded via a QR code.</p>
-
-<p>Any smartphone can be used to scan the QR code, redirecting the payer to the <i>OM Gift</i> instance.</p>
-
-<h2>The current state of development</h2>
+<h3>The current state of development</h3>
 
 <p>The <i>OM suite</i> described above is very much a work in progress, and is intended primarily as a proof-of-concept demonstration system. This version has been written for use only on Ubuntu (and possibly Debian) and runs Couchbase in a Docker container.</p>
 
 <p>Although Couchbase scales well and can replicate very quickly if clustered, the user-centred design of the <i>OM suite</i> might make Holochain a more natural fit in due course.</p>
 
-<h2>Reviewing, updating and extending the specification</h2>
+<h3>Reviewing, updating and extending the specification</h3>
 
 <p>An urgent task being undertaking at the time of writing is the review and clarification of the core <a href="https://openmoney.github.io/specification/">specification</a>, updating and extending where necessary.</p>
-  
-<h2>Short-term development</h2>
 
-<h4>openmoney-api</h4>
-
-<ul>
-
-<li>extend and complete the test suite</li>
-
-<li>API sequence diagram</li>
-
-<li>document code</li>
-
-<li>resolve lost password bug</li>
-
-<li>update the code</li>
-
-</ul>
-
-</ul>
-
-<h4>openmoney-network</h4>
-
-<ul>
-
-<li>extend and complete the test suite</li>
-
-<li>document code</li>
-
-<li>resolve lost password bug</li>
-
-<li>extend capabilities</li>
-
-<li>update the code</li>
-
-</ul>
-
-<h4>openmoney-gift-api</h4>
-
-<ul>
-
-<li>extend and complete the test suite</li>
-
-<li>update the code</li>
-
-</ul>
-
-<h4>openmoney-gift</h4>
-
-<ul>
-
-<li>extend and complete the test suite</li>
-
-</ul>
-
-<h2>In parallel ...</h2>
+<h3>In parallel ...</h3>
 
 <ul>
 
@@ -178,7 +48,7 @@
 
 </ul>
 
-<h2>Medium-term development</h2>
+<h3>Medium-term development</h3>
 
 <ul>
 
@@ -192,11 +62,11 @@
 
 </ul>
 
-<h2>Longer-term development</h2>
+<h3>Longer-term development</h3>
 
 ?
 
-<h2>An alternative implementation</h2>
+<h3>An alternative implementation</h3>
 
 <p>Because the recursive namespace structure naturally mirrors the structure of a Unix-like filesystem, that is being used as the basis of an alternative implementation currently under development as a Python module (RNA). The purposes of that will be to provide a quicker route to development of<ul>
 <li>a richer collection of OM clients</li>
@@ -213,4 +83,3 @@
 </body>
 
 </html>
-

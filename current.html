@@ -1,0 +1,115 @@
+<html>
+
+<head>
+
+<title>OpenMoney - current version</title>
+
+<link rel="stylesheet" type="text/css" href="css/om_gh.css" media="screen"/>
+
+</head>
+
+<body>
+
+<h1>The <i>current</i> openmoney (OM) suite</h1>
+
+<p>The current implementation of the <i>openmoney</i> software was created by <a href="https://github.com/deefactorial">Dominique Legault</a> and comprises four main components:</p>
+
+<h3>openmoney-api (OM API)</h3>
+
+<p><a href="https://github.com/openmoney/openmoney-api">https://github.com/openmoney/openmoney-api</a> (forked from <a href="https://github.com/deefactorial/openmoney-api">here</a>)</p>
+
+<p>This provides a REST API to a Couchbase DB in which recursively nested namespaces enclose <i>stewards</i>, <i>currencies</i> and <i>accounts</i>. This is intended as a component with an expanding collection of tools.</p>
+
+<p>All users are responsible for the management of their own records so every user is termed a <i>steward</i>.</p>
+
+<p>The <i>stewards</i> are self-registering and each can create <i>currencies</i>, <i>accounts</i> and <i>namespaces</i> where permitted.</p>
+
+<p>A <i>currency</i> is any value representable by a scalar. Therefore the term <i>open money</i> is unnecessarily restrictive. It is maintained partly for historical reasons, but also because <i>monies</i> of various type are important cases of <i>currency</i> in this sense.</p>
+
+<h3>openmoney-network</h3>
+
+<p><a href="https://github.com/openmoney/openmoney-network">https://github.com/openmoney/openmoney-network</a> (forked from <a href="https://github.com/deefactorial/openmoney-network">here</a>)</p>
+
+<p>This is a small client designed to access the OM API. Its display is sufficiently compact to make it usable on a smartphone or in an iFrame.</p>
+
+<p>This is essentially a proof-of-concept prototype.</p>
+
+<h3>openmoney-gift-api</h3>
+
+<p><a href="https://github.com/openmoney/openmoney-gift-api">https://github.com/openmoney/openmoney-gift-api</a> (forked from <a href="https://github.com/deefactorial/openmoney-gift-api">here</a>)</p>
+
+<p>An alternative API for the <i>merchants</i>' loyalty system (OM Gift). This shares some of the data from the OM API's Couchbase DB but also using an additional key-value DB. </p>
+
+<h3>openmoney-gift (OM gift)</h3>
+
+<p><a href="https://github.com/openmoney/openmoney-gift">https://github.com/openmoney/openmoney-gift</a> (forked from <a href="https://github.com/deefactorial/openmoney-gift">here</a>)</p>
+
+<p>The user interface for the <i>merchants</i>' loyalty system. This version supports the design and printing of paper vouchers identifying the <i>merchant</i>, target <i>account</i> and payment to be recorded via a QR code.</p>
+
+<p>Any smartphone can be used to scan the QR code, redirecting the payer to the <i>OM Gift</i> instance.</p>
+
+<hr size="1" />
+
+<h3>The current and short-term development development</h3>
+
+<p>The <i>OM suite</i> described above is very much a work in progress, and is intended primarily as a proof-of-concept demonstration system. This version has been written for use only on Ubuntu (and possibly Debian) and runs Couchbase in a Docker container.</p>
+
+<h4>openmoney-api</h4>
+
+<ul>
+
+<li>extend and complete the test suite</li>
+
+<li>API sequence diagram</li>
+
+<li>document code</li>
+
+<li>resolve lost password bug</li>
+
+<li>update the code</li>
+
+</ul>
+
+</ul>
+
+<h4>openmoney-network</h4>
+
+<ul>
+
+<li>extend and complete the test suite</li>
+
+<li>document code</li>
+
+<li>resolve lost password bug</li>
+
+<li>extend capabilities</li>
+
+<li>update the code</li>
+
+</ul>
+
+<h4>openmoney-gift-api</h4>
+
+<ul>
+
+<li>extend and complete the test suite</li>
+
+<li>update the code</li>
+
+</ul>
+
+<h4>openmoney-gift</h4>
+
+<ul>
+
+<li>extend and complete the test suite</li>
+
+</ul>
+
+<hr size="1" />
+
+<p>Return to <a href="index.html">development roadmap</a></p>
+
+</body>
+
+</html>
