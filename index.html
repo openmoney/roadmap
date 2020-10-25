@@ -34,43 +34,55 @@
 
 <p>An urgent task being undertaking at the time of writing is the review and clarification of the core <a href="https://openmoney.github.io/specification/">specification</a>, updating and extending where necessary.</p>
 
-<h3>In parallel ...</h3>
+<h3>Immediate/shorter-term development</h3>
 
 <ul>
 
-<li>completion, extension and clarification of the specification <a hre="https://openmoney.github.io/specification/">specification</a></li>
+<li>Completion, extension and clarification of the specification <a hre="https://openmoney.github.io/specification/">specification</a></li>
 
-<li>preparation of OpenAPI 3.0 specification YAML file (extended from the existing Swagger 2.0 YAML definition)</li>
+<li>Preparation of UML interpretation/condensation from verbose specification.</li>
 
-<li>generation of API and client stubs from OpenAPI 3.0 specification - including Rust API framework for Holochain backend</li>
+<li>Preparation of OpenAPI 3.0 specification YAML file (informed in part by the existing Swagger 2.0 YAML definition).</li>
 
-<li>preparation of specification file to automate production of hApp code</li>
+<li>Construction of reference implementation using Flask importing RNNSA Python package - see below).</li>
+
+<li>Generation of API and client stubs from OpenAPI 3.0 specification.</li>
+
+<li>Preparation of GraphQL interpretaion for Holochain Webassembly implementation.</li>
+
+<li>Preparation of specification file to automate production of hApp code.</li>
 
 </ul>
 
 <h3>Medium-term development</h3>
 
-<img src="dependencies_2_842x496.png" width="842" height="496" /> 
+<img src="dependencies_2_842x496.png" width="842" height="496" />
+
+<br />
 
 <ul>
 
-<li>develop user feedback systems</li>
+<li>Complete OpenAPI-generated client libraries (Python and Rust initially).</li>
 
-<li>complete OpenAPI-generated client libraries (Python and JavaScript initially)</li>
+<li>Develop a richer collection of reference clients.</li>
 
-<li>develop a richer collection of clients</li>
-
-<li>design and develop simulation/modelling/visualization suite</li>
+<li>Design and develop simulation/modelling/visualization suite (ABS).</li>
 
 </ul>
 
 <h3>Longer-term development</h3>
 
-?
+<ul>
 
-<h3>An alternative implementation</h3>
+<li>Develop user feedback systems.</li>
 
-<p>Because the recursive namespace structure naturally mirrors the structure of a Unix-like filesystem, that is being used as the basis of an alternative implementation currently under development as a Python module (RNA). The purposes of that will be to provide a quicker route to development of<ul>
+<li>Add further OpenAPI-generated client libraries (JavaScript initially?).</li>
+
+</ul>
+
+<h3>Additional components for open metrics implementation</h3>
+
+<p>Because the recursive namespace structure naturally mirrors the structure of a Unix-like filesystem, that is being used as the basis of an alternative implementation currently under development as a Python module (RNNSA). The purposes of that will be to provide a quicker route to development of<ul>
 <li>a richer collection of OM clients</li>
 <li>a more easily expanded reference implementation</li>
 <li>a simulation and visualization suite</li>
