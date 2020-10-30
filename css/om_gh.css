@@ -6,10 +6,11 @@ body { font-size: 14px; }
 .added { color: #800000; }
 .moved { color: #600060; }
 
-td { font-size: 14px; background: #E0F0E0; }
+td { font-size: 14px; background: #E0F0E0; padding-left: 5px; padding-right: 5px; padding-top: 2px; padding-bottom: 4px; }
 td.col-label { color: #006000; font-weight: bold; background: #A0D0A0; }
 td.row-label { color: #006000; font-weight: bold; background: #A0D0A0; }
-td.row-notes { color: #006000; bold; background: #A0D0A0; font-size: 12px; }
+td.row-notes { color: #000000; bold; background: #FFE9C4; font-size: 12px; }
+td.col-notes { color: #000000; bold; background: #FFE9C4; font-size: 12px; }
 td.blank { font-size: 12px; background: #FFFFFF; }
 
 a { text-decoration:none; }

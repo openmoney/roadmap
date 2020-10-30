@@ -49,10 +49,9 @@
 </ul>
 
 <h3>Medium-term development</h3>
-
+<!--
 <img src="dependencies_6_982x821.png" width="982" height="821" />
-
-<br />
+-->
 
 <ul>
 
@@ -73,6 +72,153 @@
 <li>Add further OpenAPI-generated client libraries (JavaScript initially?).</li>
 
 </ul>
+
+<br />
+
+<img src="dependencies_6_982x821.png" width="982" height="821" />
+
+<br />
+<!--
+<hr size="1" />
+-->
+
+<table>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- column headers -->
+    <td class="col-label"> <!-- layer -->
+      layer
+    </td>
+    <td class="col-label"> <!-- API -->
+      API
+    </td>
+    <td class="col-label"> <!-- abstraction functions -->
+      abstraction functions
+    </td>
+    <td class="col-label"> <!-- extensions -->
+      significant extensions
+    </td>
+    <td class="col-label"> <!-- constraints -->
+      constraints
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- entity layer -->
+    <td> <!-- layer -->
+      open money
+    </td>
+    <td> <!-- API -->
+      open money APIs
+    </td>
+    <td> <!-- abstraction functions -->
+      <a href="https://openmoney.github.io/specification/">open money rules</a>
+    </td>
+    <td> <!-- extensions -->
+
+    </td>
+    <td> <!-- constraints -->
+      The APIs at this level<br />constrain behaviour<br />to the
+      <a href="https://openmoney.github.io/specification/">open money rules</a>.
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- entity layer -->
+    <td> <!-- layer -->
+      open metrics
+    </td>
+    <td> <!-- API -->
+      open metrics APIs
+    </td>
+    <td> <!-- abstraction functions -->
+      open metrics rules
+    </td>
+    <td> <!-- extensions -->
+
+    </td>
+    <td> <!-- constraints -->
+      The APIs at this level<br />constrain behaviour<br />to the
+      <a href="https://openmoney.github.io/specification/">open metrics rules</a>.
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- entity layer -->
+    <td> <!-- layer -->
+      extended<br />open metrics
+    </td>
+    <td> <!-- API -->
+      extended open metrics APIs
+    </td>
+    <td> <!-- abstraction functions -->
+      open metrics<br />extended rules
+    </td>
+    <td rowspan="2"> <!-- extensions -->
+      Provides support for<br />
+      compound data types<br />
+      (vectors, matrices and<br />
+      n-tuples), time series<br />
+      and executable objects<br />
+      (both direct/native and<br  />
+      indirect/referenced).
+    </td>
+    <td> <!-- constraints -->
+
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- ledger layer -->
+    <td> <!-- layer -->
+      ledger/nesting<br />management
+    </td>
+    <td> <!-- API -->
+      ledger management
+    </td>
+    <td> <!-- abstraction functions -->
+      recursively nestable<br />
+      ledgers management
+    </td>
+    <!-- missing cell for extensions column vertical spread -->
+    <td> <!-- constraints -->
+      Minimal constraints.
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+  <tr valign="top"> <!-- notes -->
+    <td class="col-notes"> <!-- notes row -->
+      These layers represent<br />
+      different sets/ranges<br />
+      of capabilities, each<br />
+      accessed via its own<br />
+      collection of APIs.
+    </td>
+    <td class="col-notes" colspan="2"> <!-- API -->
+      Each layer may provide a set of APIs accessing its abstraction<br />
+      functions, both remotely (REST or GraphQL) and locally (in some<br />
+      cases simply by exposing the abstraction function set as native<br />
+      package/library or by providing a set of bindings from one<br />
+      language to another).
+    </td>
+    <!-- missing cell API column horizontal spread -->
+    <td class="col-notes"> <!-- extensions -->
+
+    </td>
+    <td class="col-notes"> <!-- constraints -->
+
+    </td>
+  </tr>
+  <!-- ------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+</table>
+
+<br />
+
 
 <h3>Additional components for open metrics implementation</h3>
 
