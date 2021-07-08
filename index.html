@@ -19,42 +19,96 @@ open measures, open metrics" />
 
 <body>
 
-<h1>[openmoney | <i>open money</i> | <i>open metrics</i> ] development roadmap</h1>
+<h1>
+  [openmoney | <em>open money</em> | <em>open metrics</em> ] development
+  roadmap
+</h1>
 
-<h4>Clarification of terms:</h4>
+<h4>
+  Clarification of terms:
+</h4>
 
-<p>The term <i>open money</i> (all lower case) refers to the concept of user-created "monies". This is described in a number of writings many of which have been collected <a href="https://openmoney.github.io/openmoney-links/">here</a>.</p>
+<p>
+  The term <em>open money</em> (all lower case) refers to the concept of
+  user-created "monies". This is described in a number of writings many of
+  which have been collected
+  <a href="https://openmoney.github.io/openmoney-links/">here</a>.
+</p>
 
-<p>In this sense, <i>open money</i> is a particular case of <i>open metrics</i>.</p>
+<p>
+  In this sense, <em>open money</em> is a particular case of <em>open
+  measures</em> (a.k.a.<em>open metrics</em>).
+</p>
 
-<p>The names <i>openmoney</i> or <i>OpenMoney</i> (no spaces) refer to specific software used to implement <i>open money</i> or, more generally, <i>open metrics</i>.</p>
+<p>
+  The names <em>openmoney</em> or <em>OpenMoney</em> (no spaces) refer to
+  specific software used to implement <em>open money</em> or, more generally,
+  <em>open measures/metrics</em>.
+</p>
 
-<h3>The current openmoney (OM) suite</h3>
+<h3>
+  The current openmoney (OM) suite
+</h3>
 
-<p>The <a href="current.html">current implementation</a> of the <i>openmoney</i> software is essentially a proof-of-concept prototype. However, it includes some important and valuable features that must be retained and expanded upon. </p>
+<p>
+  The <a href="current.html">current implementation</a> of the
+  <em>openmoney</em> software is essentially a proof-of-concept prototype.
+  However, it includes some important and valuable features that must be
+  retained and expanded upon.
+</p>
 
-<p>The <i>OM suite</i> described above is very much a work in progress, and is intended primarily as a proof-of-concept demonstration system. This version has been written for use only on Ubuntu (and possibly Debian) and runs Couchbase in a Docker container.</p>
+<p>
+  The <em>OM suite</em> described above is very much a work in progress, and is
+  intended primarily as a proof-of-concept demonstration system. This version
+  has been written for use only on Ubuntu (and possibly Debian) and runs
+  <em></em>Couchbase in a Docker container.
+</p>
 
-<p>Although Couchbase scales well and can replicate very quickly if clustered, the user-centred design of the <i>OM suite</i> might make Holochain a more natural fit in due course.</p>
+<p>
+  Although Couchbase scales well and can replicate very quickly if clustered,
+  the user-centred design of the <em>OM suite</em> might make a distributed
+  hash-chain system (e.g. <em>Holochain</em> a more natural fit in due course.
+</p>
 
-<h3>Immediate/shorter-term development</h3>
+<h3>
+  Immediate/shorter-term development
+</h3>
 
 <ul>
 
-<li>Completion, extension and clarification of the specification <a href="https://openmoney.github.io/specification/">specification</a> (currently excessively verbose pending condensation).</li>
+  <li>
+    Completion, extension and clarification of the specification
+    <a href="https://openmoney.github.io/specification/">specification</a>
+    (currently excessively verbose pending condensation).
+  </li>
 
-<li>Preparation of UML interpretation/condensation from verbose specification.</li>
+  <li>
+    Preparation of UML interpretation/condensation from verbose specification.
+  </li>
 
-<li>Preparation of OpenAPI 3.0 specification YAML file (informed in part by the existing Swagger 2.0 YAML definition).</li>
+  <li>
+    Preparation of OpenAPI 3.0 specification YAML file (informed in part by the
+    existing Swagger 2.0 YAML definition).
+  </li>
 
-<li>Construction of reference implementation using Flask importing <a href="https://nests.lrc.org.uk">NESTS</a> Python package - see below).</li>
+  <li>
+    Construction of reference/test/prototype/experimentation/demonstration
+    implementation <a href="https://nests.lrc.org.uk">NESTS</a>.
+  </li>
+<!--
+  <li>
+    Generation of API and client stubs from OpenAPI 3.0 specification.
+  </li>
 
-<li>Generation of API and client stubs from OpenAPI 3.0 specification.</li>
+  <li>
+    Preparation of GraphQL interpretaion for Holochain Webassembly
+    implementation.
+  </li>
 
-<li>Preparation of GraphQL interpretaion for Holochain Webassembly implementation.</li>
-
-<li>Preparation of specification file to automate production of hApp code.</li>
-
+  <li>
+    Preparation of specification file to automate production of hApp code.
+  </li>
+-->
 </ul>
 
 <h3>Medium-term development</h3>
@@ -65,193 +119,36 @@ open measures, open metrics" />
 <!-- test 3 -->
 <ul>
 
-<li>Complete OpenAPI-generated client libraries (Python and Rust initially).</li>
+  <li>
+    Complete OpenAPI-generated client libraries (Python and Rust initially).
+  </li>
 
-<li>Develop a richer collection of reference clients.</li>
+  <li>
+    Develop a richer collection of reference clients.
+  </li>
 
-<li>Design and develop simulation/modelling/visualization suite (ABS).</li>
+  <li>
+    Design and develop simulation/modelling/visualization suite (ABS).
+  </li>
 
-</ul>
+  </ul>
 
 <h3>Longer-term development</h3>
 
 <ul>
 
-<li>Develop user feedback systems.</li>
+  <li>
+    Develop user feedback systems.
+  </li>
 
-<li>Add further OpenAPI-generated client libraries (JavaScript initially?).</li>
+  <li>
+    Add further OpenAPI-generated client libraries (JavaScript initially?).
+  </li>
 
 </ul>
 
 <br />
 <hr size="1" />
-
-<h3>Dependencies within the immediate-/shorter-term development plan</h3>
-
-<img src="dependencies_7_1042x821.png" width="1042" height="821" />
-<!--
-<img src="dependencies_6_982x821.png" width="982" height="821" />
--->
-
-<br /><br />
-<hr size="1" />
-<!--
--->
-<h3>A rough overview of the factorization</h3>
-
-<table>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- column headers -->
-    <td class="col-label"> <!-- layer -->
-      layer
-    </td>
-    <td class="col-label"> <!-- API -->
-      API
-    </td>
-    <td class="col-label"> <!-- abstraction functions -->
-      abstraction functions
-    </td>
-    <td class="col-label"> <!-- extensions -->
-      significant extensions
-    </td>
-    <td class="col-label"> <!-- constraints -->
-      constraints
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- entity layer -->
-    <td> <!-- layer -->
-      open money
-    </td>
-    <td> <!-- API -->
-      open money APIs
-    </td>
-    <td> <!-- abstraction functions -->
-      <a href="https://openmoney.github.io/specification/">open money rules</a>
-    </td>
-    <td> <!-- extensions -->
-
-    </td>
-    <td> <!-- constraints -->
-      The APIs at this level<br />constrain behaviour<br />to the
-      <a href="https://openmoney.github.io/specification/">open money rules</a>.
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- entity layer -->
-    <td> <!-- layer -->
-      open metrics
-    </td>
-    <td> <!-- API -->
-      open metrics APIs
-    </td>
-    <td> <!-- abstraction functions -->
-      open metrics rules
-    </td>
-    <td> <!-- extensions -->
-
-    </td>
-    <td> <!-- constraints -->
-      The APIs at this level<br />constrain behaviour<br />to the
-      <a href="https://openmoney.github.io/specification/">open metrics rules</a>.
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- entity layer -->
-    <td> <!-- layer -->
-      extended<br />open metrics
-    </td>
-    <td> <!-- API -->
-      extended open metrics APIs
-    </td>
-    <td> <!-- abstraction functions -->
-      open metrics<br />extended rules
-    </td>
-    <td rowspan="2"> <!-- extensions -->
-      Provides support for<br />
-      compound data types<br />
-      (vectors, matrices and<br />
-      n-tuples), time series<br />
-      and executable objects<br />
-      (both direct/native and<br  />
-      indirect/referenced).
-    </td>
-    <td> <!-- constraints -->
-
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- ledger layer -->
-    <td> <!-- layer -->
-      ledger/nesting<br />management
-    </td>
-    <td> <!-- API -->
-      ledger management
-    </td>
-    <td> <!-- abstraction functions -->
-      recursively nestable<br />
-      ledgers management
-    </td>
-    <!-- missing cell for extensions column vertical spread -->
-    <td> <!-- constraints -->
-      Minimal constraints.
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-  <tr valign="top"> <!-- notes -->
-    <td class="col-notes"> <!-- notes row -->
-      These layers represent<br />
-      different sets/ranges<br />
-      of capabilities, each<br />
-      accessed via its own<br />
-      collection of APIs.
-    </td>
-    <td class="col-notes" colspan="2"> <!-- API -->
-      Each layer may provide a set of APIs accessing its abstraction<br />
-      functions, both remotely (REST or GraphQL) and locally (in some<br />
-      cases simply by exposing the abstraction function set as native<br />
-      package/library or by providing a set of bindings from one<br />
-      language to another).
-    </td>
-    <!-- missing cell API column horizontal spread -->
-    <td class="col-notes"> <!-- extensions -->
-
-    </td>
-    <td class="col-notes"> <!-- constraints -->
-
-    </td>
-  </tr>
-  <!-- ------------------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-</table>
-
-<br />
-<hr size="1" />
-
-
-<h3>Additional components for open metrics implementation</h3>
-
-<p>Because the recursive namespace structure naturally mirrors the structure of a Unix-like filesystem, that is being used as the basis of an alternative implementation currently under development as a Python module (<a href="https://nests.lrc.org.uk">NESTS</a>). The purposes of that will be to provide a quicker route to development of<ul>
-<li>a richer collection of OM clients</li>
-<li>a more easily expanded reference implementation</li>
-<li>a simulation and visualization suite</li>
-<li>support for compound/vector currencies (information-retentive)</li>
-<li>modelling, forecasting and algedonic tools </li>
-</ul></p>
-
-<p>Another objective here is to provide an API consistent with, but a superset of, that of the <i>openmoney</i> suite described above. This will simplify development of portable and re-usable components.</p>
-
-<p>The recursively-nested, holonic structure of the OM suite reflects the structure of the Viable System Model, so a suite of tools will be developed over time to support its application.</p>
-
 
 </body>
 
